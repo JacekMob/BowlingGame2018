@@ -48,6 +48,20 @@ public class GameTest {
         assertEquals(20, sut.score());
     }
 
+    @Test
+    public void perfectGame_scoreIs300() {
+        rollMany(12, 10);
+
+        assertEquals(300, sut.score());
+    }
+
+    @Test
+    public void rolledAll5_scoreIs150() {
+        rollMany(21, 5);
+
+        assertEquals(150, sut.score());
+    }
+
     private void rollSpare() {
         sut.roll(5);
         sut.roll(5);
