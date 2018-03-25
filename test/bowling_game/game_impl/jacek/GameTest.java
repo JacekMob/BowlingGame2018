@@ -15,7 +15,7 @@ public class GameTest {
     }
 
     @Test
-    public void canCreateGame() {
-        assertNotNull(sut);
+    public void canRoll() {
+        sut.roll(5);
     }
 }
