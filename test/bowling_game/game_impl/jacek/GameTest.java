@@ -16,10 +16,21 @@ public class GameTest {
 
     @Test
     public void rolledAllZeroes_scoreIsZero() {
-        for (int i = 0; i < 20; i++) {
-            sut.roll(0);
-        }
+        rollMany(20, 0);
 
         assertEquals(0, sut.score());
+    }
+
+    @Test
+    public void rolledAllOnes_scoreIs20() {
+        rollMany(20, 1);
+
+        assertEquals(20, sut.score());
+    }
+
+    private void rollMany(int rolls, int pins) {
+        for (int i = 0; i < rolls; i++) {
+            sut.roll(pins);
+        }
     }
 }
