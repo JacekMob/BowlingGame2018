@@ -15,7 +15,11 @@ public class GameTest {
     }
 
     @Test
-    public void canRoll() {
-        sut.roll(5);
+    public void rolledAllZeroes_scoreIsZero() {
+        for (int i = 0; i < 20; i++) {
+            sut.roll(0);
+        }
+
+        assertEquals(0, sut.score());
     }
 }
