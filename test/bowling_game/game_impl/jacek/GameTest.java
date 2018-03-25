@@ -1,5 +1,6 @@
 package bowling_game.game_impl.jacek;
 
+import bowling_game.IGame;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -8,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class GameTest {
 
-    private GameByJacek sut;
+    private IGame sut;
 
     @Before
     public void setUp() throws Exception {

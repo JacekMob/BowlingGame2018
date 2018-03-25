@@ -1,16 +1,20 @@
 package bowling_game.game_impl.jacek;
 
-public class GameByJacek {
+import bowling_game.IGame;
+
+public class GameByJacek implements IGame {
     public static final int NUMBER_OF_PINS = 10;
     public static final int NUMBER_OF_FRAMES = 10;
     private int[] rolls = new int[21];
     private int currentRoll = 0;
 
+    @Override
     public void roll(int pin) {
         rolls[currentRoll] = pin;
         currentRoll++;
     }
 
+    @Override
     public int score() {
         int score = 0;
 
