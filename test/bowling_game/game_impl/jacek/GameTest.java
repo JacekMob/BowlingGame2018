@@ -38,6 +38,16 @@ public class GameTest {
         assertEquals(14, sut.score());
     }
 
+    @Test
+    public void rolledStrike_nextTwoRollsAreBonus() {
+        sut.roll(10);
+        sut.roll(2);
+        sut.roll(3);
+        rollMany(17, 0);
+
+        assertEquals(20, sut.score());
+    }
+
     private void rollSpare() {
         sut.roll(5);
         sut.roll(5);
