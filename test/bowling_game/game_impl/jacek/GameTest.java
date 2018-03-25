@@ -1,6 +1,7 @@
 package bowling_game.game_impl.jacek;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -26,6 +27,20 @@ public class GameTest {
         rollMany(20, 1);
 
         assertEquals(20, sut.score());
+    }
+
+    @Test
+    public void rolledSpare_nextRollIsBonus() {
+        rollSpare();
+        sut.roll(2);
+        rollMany(17, 0);
+
+        assertEquals(14, sut.score());
+    }
+
+    private void rollSpare() {
+        sut.roll(5);
+        sut.roll(5);
     }
 
     private void rollMany(int rolls, int pins) {
