@@ -1,9 +1,9 @@
-package bowling_game.game_impl.jacek;
+package bowling_game.game_impl;
 
-import bowling_game.IGame;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
+import bowling_game.IGame;
+import bowling_game.game_impl.jacek.GameByJacek;
 
 import static org.junit.Assert.*;
 
