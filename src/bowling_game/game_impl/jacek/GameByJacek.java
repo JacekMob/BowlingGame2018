@@ -2,6 +2,7 @@ package bowling_game.game_impl.jacek;
 
 import bowling_game.IGame;
 
+// test comment
 public class GameByJacek implements IGame {
     public static final int NUMBER_OF_PINS = 10;
     public static final int NUMBER_OF_FRAMES = 10;
